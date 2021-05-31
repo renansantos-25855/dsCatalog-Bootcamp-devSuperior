@@ -60,7 +60,6 @@ public class ProductService {
 		try {
 		Product entity = repository.getOne(id);
 		copyDtoToEntity(dto, entity);
-		entity.setName(dto.getName());
 		entity = repository.save(entity);
 		return new ProductDTO(entity);
 		}
